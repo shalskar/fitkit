@@ -750,11 +750,11 @@
 
 .device-mockup.nexus6 > .device,
 .device-mockup.nexus6.portrait > .device {
-	background-image: url("nexus_6/nexus6_port.png");
+	background-image: url("nexus6/nexus6_port.png");
 }
 
 .device-mockup.nexus6.landscape > .device {
-	background-image: url("nexus_6/nexus_6_land.png");
+	background-image: url("nexus6/nexus_6_land.png");
 }
 
 .device-mockup.nexus6 > .device > .screen,
