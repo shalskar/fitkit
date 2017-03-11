@@ -49,8 +49,16 @@ p {
 
 // App logo
 .app-logo {
-    height: 192px;
-    width: 192px;
+    height: 160px;
+    width: 160px;
+    margin-top: 32px;
+    margin-bottom: 64px;
+
+    @media (min-width: 768px) {
+        height: 192px;
+        width: 192px;
+    }
+
 }
 
 
@@ -144,6 +152,7 @@ header {
     position: relative;
     width: 100%;
     min-height: auto;
+    max-height: 900px;
     overflow-y: hidden;
     background: url("../img/header-photo.jpg"), @theme-secondary; /* fallback for old browsers */
     background: url("../img/header-photo.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
@@ -200,11 +209,11 @@ header {
             }
         }
         .device-container {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+            transform: translateY(50%);
             max-width: none;
         }
     }
