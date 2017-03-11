@@ -47,16 +47,24 @@ p {
     margin-bottom: 20px;
 }
 
+// App logo
+.app-logo {
+    height: 192px;
+    width: 192px;
+}
+
+
 // Navigation
 
 .navbar-default {
-    background-color: white;
+    background-color: @gray-transparent;
     border-color: fade(@gray-darker, 5%);
     .transition-all;
     .heading-font;
     .navbar-header .navbar-brand {
         .heading-font;
-        color: @theme-primary;
+        font-size: 24px;
+        color: white;
         &:hover,
         &:focus {
             color: darken(@theme-primary, 10%);
@@ -64,7 +72,7 @@ p {
     }
     .navbar-header .navbar-toggle {
         font-size: 12px;
-        color: @gray-darker;
+        color: white;
         padding: 8px 10px;
     }
     .nav {
@@ -75,15 +83,15 @@ p {
             }
             > a,
             > a:focus {
-                color: @gray-darker;
+                color: white;
                 &:hover {
-                    color: @theme-primary;
+                    color: @theme-secondary;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: @theme-primary !important;
+                    color: @theme-secondary !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -106,24 +114,24 @@ p {
         .nav > li > a:focus {
             color: fade(white, 70%);
             &:hover {
-                color: white;
+                color: @theme-secondary;
             }
         }
         &.affix {
-            background-color: white;
+            background-color: @gray-transparent;
             border-color: fade(@gray-darker, 10%);
             .navbar-header .navbar-brand {
-                color: @gray-darker;
+                color: white;
                 &:hover,
                 &:focus {
-                    color: @theme-primary;
+                    color: @theme-secondary;
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @gray-darker;
+                color: white;
                 &:hover {
-                    color: @theme-primary;
+                    color: @theme-secondary;
                 }
             }
         }
@@ -137,9 +145,12 @@ header {
     width: 100%;
     min-height: auto;
     overflow-y: hidden;
-    background: url("../img/bg-pattern.png"), @theme-secondary; /* fallback for old browsers */
-    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
-    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url("../img/header-photo.jpg"), @theme-secondary; /* fallback for old browsers */
+    background: url("../img/header-photo.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
+    background: url("../img/header-photo.jpg"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size:     cover;
+        background-repeat:   no-repeat;
+        background-position: center center;
     color: white;
     .header-content {
         text-align: center;
@@ -210,7 +221,7 @@ section {
 }
 
 section.download {
-    padding: 150px 0;
+    padding: 64px 0px 128px 0px;
     position: relative;
     h2 {
         margin-top: 0;
@@ -268,8 +279,7 @@ section.features {
         }
         i {
             font-size: 80px;
-              background: -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              background: linear-gradient(to left, @theme-secondary , @theme-tertiary);
+              background: @theme-primary;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
         }
@@ -319,9 +329,7 @@ section.contact {
     h2 {
         margin-top: 0;
         margin-bottom: 25px;
-        i {
-            color: @brand-google-plus;
-        }
+
     }
     ul.list-social {
         margin-bottom: 0;
@@ -333,29 +341,29 @@ section.contact {
                 line-height: 80px;
                 font-size: 40px;
                 border-radius: 100%;
-                color: white;
+                color: @theme-primary;
             }
             &.social-twitter {
                 a {
-                    background-color: @brand-twitter;
+                    background-color: white;
                     &:hover {
-                        background-color: darken(@brand-twitter, 5%);
+                        background-color: darken(@theme-secondary, 5%);
                     }
                 }
             }
             &.social-facebook {
                 a {
-                    background-color: @brand-facebook;
+                    background-color: white;
                     &:hover {
-                        background-color: darken(@brand-facebook, 5%);
+                        background-color: darken(@theme-secondary, 5%);
                     }
                 }
             }
-            &.social-google-plus {
+            &.social-email {
                 a {
-                    background-color: @brand-google-plus;
+                    background-color: white;
                     &:hover {
-                        background-color: darken(@brand-google-plus, 5%);
+                        background-color: darken(@theme-secondary, 5%);
                     }
                 }
             }
@@ -397,6 +405,10 @@ footer {
     background: linear-gradient(@theme-primary , darken(@theme-primary, 5%));
 }
 
+.bg-gray-pattern {
+    background: url("../img/bg-pattern.jpg"), @theme-secondary;
+}
+
 .text-primary {
     color: @theme-primary;
 }
@@ -415,9 +427,9 @@ footer {
     &:focus,
     &:active,
     &.active {
-        color: white;
-        background-color: @theme-primary;
-        border-color: @theme-primary;
+        color: @theme-secondary;
+        background-color: fade(@gray-base, 25%);
+        border-color: @theme-secondary;
     }
 }
 
